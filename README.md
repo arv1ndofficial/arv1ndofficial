@@ -31,6 +31,7 @@
 <p><b>Senior Data &amp; AI Engineer</b></p>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-aravindanramesh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aravindanramesh/)
+[![Live Terminal](https://img.shields.io/badge/⚡_Live_Terminal-arv1ndofficial.github.io-22d3ee?style=for-the-badge&logo=gnometerminal&logoColor=black)](https://arv1ndofficial.github.io)
 
 <br>
 
