@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 """Hand-authored neofetch-style info card SVG.
 
-Renders a title bar plus key/value rows that fade + slide in on a short
-stagger. Set STATIC=1 to emit a frozen (no-animation) frame, useful for
-local Quick Look previews.
+Wrapped in the same terminal-window chrome as the ASCII portrait (traffic-
+light dots + title bar). A colored "user@host" header and divider sit above
+key/value rows that fade + rise into place on a short stagger. Set STATIC=1
+to emit a frozen (no-animation) frame, useful for local Quick Look previews.
 
 Usage: python make_info_card.py [out.svg]
 """
@@ -11,13 +12,19 @@ import os
 import sys
 
 WIDTH = 490
-LINE_H = 30
-PAD_TOP = 56
-PAD_X = 24
-STAGGER = 0.12
+LINE_H = 24
+PAD_X = 20
+TITLE_BAR_H = 30
+HEADER_Y = 60
+DIVIDER_Y = 68
+FIELDS_TOP = 92
+STAGGER = 0.06
 DUR = 0.4
+EASE = "0.2 0.8 0.2 1"
 
-TITLE = "arv1ndofficial@github"
+TITLE = "arv1ndofficial@github: ~$ neofetch"
+USER = "arv1ndofficial"
+HOST = "github"
 FIELDS = [
     ("Now", "Sr. Data Engineer @ M2P Fintech"),
     ("Prev", "Data Engineer @ TCS (2021-2025)"),
@@ -32,42 +39,65 @@ def esc(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+def reveal_open(delay: float) -> str:
+    if STATIC:
+        return "<g>"
+    return (
+        f'<g opacity="0" transform="translate(0,5)">'
+        f'<animate attributeName="opacity" from="0" to="1" begin="{delay:.2f}s" '
+        f'dur="{DUR}s" fill="freeze" />'
+        f'<animateTransform attributeName="transform" type="translate" '
+        f'from="0 5" to="0 0" begin="{delay:.2f}s" dur="{DUR}s" fill="freeze" '
+        f'calcMode="spline" keySplines="{EASE}" />'
+    )
+
+
 def build_svg() -> str:
-    height = PAD_TOP + LINE_H * len(FIELDS) + 24
+    height = FIELDS_TOP + LINE_H * len(FIELDS) + 16
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {height}" '
         f'width="{WIDTH}" height="{height}" font-family="ui-monospace, SFMono-Regular, '
-        f'Consolas, Menlo, monospace" font-size="14">',
-        f'<rect x="0" y="0" width="{WIDTH}" height="{height}" rx="8" fill="#0d1117" '
-        f'stroke="#30363d" />',
-        # title bar
-        '<circle cx="20" cy="20" r="6" fill="#ff5f56" />',
-        '<circle cx="40" cy="20" r="6" fill="#ffbd2e" />',
-        '<circle cx="60" cy="20" r="6" fill="#27c93f" />',
-        f'<text x="{PAD_X}" y="{PAD_TOP - 20}" fill="#8b949e" font-size="13">{esc(TITLE)}</text>',
-        f'<line x1="{PAD_X}" y1="{PAD_TOP - 8}" x2="{WIDTH - PAD_X}" y2="{PAD_TOP - 8}" '
-        f'stroke="#30363d" />',
+        f'Consolas, Menlo, monospace">',
+        "<defs>",
+        '<linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">',
+        '<stop offset="0" stop-color="#111722" />',
+        '<stop offset="1" stop-color="#0d1117" />',
+        "</linearGradient>",
+        "</defs>",
+        f'<rect width="{WIDTH}" height="{height}" rx="12" fill="url(#ibg)" />',
+        f'<rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{height - 1}" rx="12" '
+        f'fill="none" stroke="#30363d" />',
+        f'<line x1="0" y1="{TITLE_BAR_H}" x2="{WIDTH}" y2="{TITLE_BAR_H}" stroke="#30363d" />',
+        '<circle cx="20" cy="15" r="5" fill="#ff5f56" />',
+        '<circle cx="36" cy="15" r="5" fill="#ffbd2e" />',
+        '<circle cx="52" cy="15" r="5" fill="#27c93f" />',
+        f'<text x="{WIDTH / 2}" y="19" fill="#7d8590" font-size="12" '
+        f'text-anchor="middle">{esc(TITLE)}</text>',
     ]
 
+    # header: colored user@host + divider
+    parts.append(reveal_open(0.10))
+    parts.append(
+        f'<text x="{PAD_X}" y="{HEADER_Y}" font-size="15" font-weight="700">'
+        f'<tspan fill="#3fb950">{esc(USER)}</tspan>'
+        f'<tspan fill="#7d8590">@</tspan>'
+        f'<tspan fill="#22d3ee">{esc(HOST)}</tspan>'
+        f"</text>"
+    )
+    parts.append(
+        f'<line x1="{PAD_X}" y1="{DIVIDER_Y}" x2="{WIDTH - PAD_X}" y2="{DIVIDER_Y}" '
+        f'stroke="#30363d" stroke-opacity="0.8" />'
+    )
+    parts.append("</g>")
+
     for i, (key, value) in enumerate(FIELDS):
-        y = PAD_TOP + i * LINE_H + 18
-        if STATIC:
-            parts.append("<g>")
-        else:
-            start = i * STAGGER
-            parts.append('<g opacity="0" transform="translate(-8,0)">')
-            parts.append(
-                f'<animate attributeName="opacity" from="0" to="1" begin="{start:.2f}s" '
-                f'dur="{DUR}s" fill="freeze" />'
-            )
-            parts.append(
-                f'<animateTransform attributeName="transform" type="translate" '
-                f'from="-8,0" to="0,0" begin="{start:.2f}s" dur="{DUR}s" fill="freeze" />'
-            )
-        parts.append(f'<text x="{PAD_X}" y="{y}" fill="#39d353">{esc(key)}</text>')
+        y = FIELDS_TOP + i * LINE_H
+        delay = 0.16 + i * STAGGER
+        parts.append(reveal_open(delay))
         parts.append(
-            f'<text x="{PAD_X + 110}" y="{y}" fill="#c9d1d9">{esc(value)}</text>'
+            f'<text x="{PAD_X}" y="{y}" fill="#ffa657" font-size="13" font-weight="700">{esc(key)}</text>'
         )
+        parts.append(f'<text x="{PAD_X + 96}" y="{y}" fill="#c9d1d9" font-size="13">{esc(value)}</text>')
         parts.append("</g>")
 
     parts.append("</svg>")
