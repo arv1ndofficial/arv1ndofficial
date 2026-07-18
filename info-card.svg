@@ -1,35 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 204" width="490" height="204" font-family="ui-monospace, SFMono-Regular, Consolas, Menlo, monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 334" width="490" height="334" font-family="ui-monospace, SFMono-Regular, Consolas, Menlo, monospace">
 <defs>
 <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0" stop-color="#111722" />
 <stop offset="1" stop-color="#0d1117" />
 </linearGradient>
 </defs>
-<rect width="490" height="204" rx="12" fill="url(#ibg)" />
-<rect x="0.5" y="0.5" width="489" height="203" rx="12" fill="none" stroke="#30363d" />
+<rect width="490" height="334" rx="12" fill="url(#ibg)" />
+<rect x="0.5" y="0.5" width="489" height="333" rx="12" fill="none" stroke="#30363d" />
 <line x1="0" y1="30" x2="490" y2="30" stroke="#30363d" />
 <circle cx="20" cy="15" r="5" fill="#ff5f56" />
 <circle cx="36" cy="15" r="5" fill="#ffbd2e" />
 <circle cx="52" cy="15" r="5" fill="#27c93f" />
 <text x="245.0" y="19" fill="#7d8590" font-size="12" text-anchor="middle">arv1ndofficial@github: ~$ neofetch</text>
-<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.10s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.10s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
+<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.08s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.08s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
 <text x="20" y="60" font-size="15" font-weight="700"><tspan fill="#3fb950">arv1ndofficial</tspan><tspan fill="#7d8590">@</tspan><tspan fill="#22d3ee">github</tspan></text>
 <line x1="20" y1="68" x2="470" y2="68" stroke="#30363d" stroke-opacity="0.8" />
 </g>
-<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.16s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.16s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
-<text x="20" y="92" fill="#ffa657" font-size="13" font-weight="700">Now</text>
-<text x="116" y="92" fill="#c9d1d9" font-size="13">Sr. Data Engineer @ M2P Fintech</text>
+<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.14s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.14s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
+<text x="20" y="90" fill="#ffa657" font-size="12.5" font-weight="700">OS</text>
+<text x="100" y="90" fill="#c9d1d9" font-size="12.5">Senior Data &amp; AI Engineer</text>
 </g>
-<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.22s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.22s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
-<text x="20" y="116" fill="#ffa657" font-size="13" font-weight="700">Prev</text>
-<text x="116" y="116" fill="#c9d1d9" font-size="13">Data Engineer @ TCS (2021-2025)</text>
+<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.19s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.19s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
+<text x="20" y="112" fill="#ffa657" font-size="12.5" font-weight="700">Host</text>
+<text x="100" y="112" fill="#c9d1d9" font-size="12.5">M2P Fintech (prev: TCS)</text>
 </g>
-<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.28s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.28s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
-<text x="20" y="140" fill="#ffa657" font-size="13" font-weight="700">Stack</text>
-<text x="116" y="140" fill="#c9d1d9" font-size="13">Spark, Iceberg, Trino, Airflow, K8s</text>
+<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.24s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.24s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
+<text x="20" y="134" fill="#ffa657" font-size="12.5" font-weight="700">Uptime</text>
+<text x="100" y="134" fill="#c9d1d9" font-size="12.5">5+ years</text>
+</g>
+<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.29s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.29s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
+<text x="20" y="156" fill="#ffa657" font-size="12.5" font-weight="700">Shell</text>
+<text x="100" y="156" fill="#c9d1d9" font-size="12.5">Python, SQL, Scala</text>
 </g>
 <g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.34s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.34s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
-<text x="20" y="164" fill="#ffa657" font-size="13" font-weight="700">Highlights</text>
-<text x="116" y="164" fill="#c9d1d9" font-size="13">Led 5-eng team; MCP agentic data lake</text>
+<text x="20" y="178" fill="#ffa657" font-size="12.5" font-weight="700">Stack</text>
+<text x="100" y="178" fill="#c9d1d9" font-size="12.5">Spark, Iceberg, Trino, Airflow</text>
 </g>
+<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.39s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.39s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
+<text x="20" y="200" fill="#ffa657" font-size="12.5" font-weight="700">Cloud</text>
+<text x="100" y="200" fill="#c9d1d9" font-size="12.5">AWS, Kubernetes, Databricks</text>
+</g>
+<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.44s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.44s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
+<text x="20" y="222" fill="#ffa657" font-size="12.5" font-weight="700">AI/ML</text>
+<text x="100" y="222" fill="#c9d1d9" font-size="12.5">RAG, MCP, ChromaDB, LLMs</text>
+</g>
+<g opacity="0" transform="translate(0,5)"><animate attributeName="opacity" from="0" to="1" begin="0.49s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="0.49s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
+<text x="20" y="244" fill="#ffa657" font-size="12.5" font-weight="700">Location</text>
+<text x="100" y="244" fill="#c9d1d9" font-size="12.5">Chennai, India</text>
+</g>
+<g opacity="0" transform="translate(0,4)"><animate attributeName="opacity" from="0" to="1" begin="0.59s" dur="0.4s" fill="freeze" /><animateTransform attributeName="transform" type="translate" from="0 4" to="0 0" begin="0.59s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" />
+<rect x="20" y="276" width="16" height="16" rx="3" fill="#21262d" />
+<rect x="42" y="276" width="16" height="16" rx="3" fill="#f85149" />
+<rect x="64" y="276" width="16" height="16" rx="3" fill="#3fb950" />
+<rect x="86" y="276" width="16" height="16" rx="3" fill="#d29922" />
+<rect x="108" y="276" width="16" height="16" rx="3" fill="#58a6ff" />
+<rect x="130" y="276" width="16" height="16" rx="3" fill="#bc8cff" />
+<rect x="152" y="276" width="16" height="16" rx="3" fill="#39c5cf" />
+<rect x="174" y="276" width="16" height="16" rx="3" fill="#c9d1d9" />
+</g>
+<text x="20" y="320" font-size="13"><tspan fill="#3fb950">arv1ndofficial</tspan><tspan fill="#7d8590">@</tspan><tspan fill="#22d3ee">github</tspan><tspan fill="#7d8590">:~$</tspan></text>
+<rect x="240.8" y="309" width="7" height="13" fill="#c9d1d9" opacity="0"><animate attributeName="opacity" values="1;1;0;0" dur="1s" begin="0.94s" repeatCount="indefinite" /></rect>
 </svg>
