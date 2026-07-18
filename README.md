@@ -30,8 +30,9 @@
 
 <p><b>Senior Data &amp; AI Engineer</b></p>
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-arv1ndofficial.github.io-a78bfa?style=for-the-badge&logo=vercel&logoColor=white)](https://arv1ndofficial.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-aravindanramesh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aravindanramesh/)
-[![Live Terminal](https://img.shields.io/badge/⚡_Live_Terminal-arv1ndofficial.github.io-22d3ee?style=for-the-badge&logo=gnometerminal&logoColor=black)](https://arv1ndofficial.github.io)
+[![Live Terminal](https://img.shields.io/badge/⚡_Live_Terminal-arv1ndofficial.github.io/terminal-22d3ee?style=for-the-badge&logo=gnometerminal&logoColor=black)](https://arv1ndofficial.github.io/terminal)
 
 <br>
 
