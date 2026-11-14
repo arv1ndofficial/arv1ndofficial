@@ -1,5 +1,10 @@
 <div align="center">
 
+<!-- Terminal Session Hit Counter via Open-Source API -->
+<p align="right">
+  <img src="https://komarev.com/ghpvc/?username=arv1ndofficial&color=22d3ee&style=flat-square&label=TERMINAL+SESSIONS" alt="Terminal Sessions" />
+</p>
+
 <!-- hero: monochrome ASCII portrait (types in) beside a neofetch-style info
      panel. regenerate portrait: python scripts/prep_photo.py <photo> &&
      python scripts/make_ascii_svg.py ; info panel: python scripts/make_info_card.py -->
@@ -22,6 +27,15 @@
 <td valign="top"><img src="./info-card.svg" width="490" alt="Aravindan Rameshbabu — experience, stack, highlights" /></td>
 </tr>
 </table>
+
+<br>
+
+<!-- Live Typewriter CLI via ReadMe Typing SVG API -->
+<p align="center">
+  <a href="https://arv1ndofficial.github.io">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=2800&pause=800&color=22D3EE&center=true&vCenter=true&width=720&lines=%E2%96%B8+Senior+Data+%26+AI+Engineer+%7C+M2P+Fintech+(ex-TCS);%E2%96%B8+Architecting+Distributed+Lakehouses+(Spark+%2B+Iceberg+%2B+Trino);%E2%96%B8+Engineering+Autonomous+Data+Agents+via+MCP+%26+RAG;%E2%96%B8+High-Throughput+Streaming+Pipelines+(Kafka+%2B+Flink+%2B+Cassandra);%E2%96%B8+Databricks+Declarative+CDC+%26+Delta+Live+Tables+(DLT)" alt="Live Typing CLI" />
+  </a>
+</p>
 
 <br>
 
@@ -56,6 +70,13 @@ CREDENTIALS="Flink Streaming Engineer (Confluent) · Azure DP-203 · AWS SAA · 
 <br>
 
 <h3><code>arv1ndofficial@github ~ $ neofetch --skills</code></h3>
+
+<!-- Interactive SkillIcons Open Source API Ribbon -->
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=py,scala,bash,linux,aws,azure,kubernetes,docker,kafka,postgres,mongodb,git&theme=dark" alt="Skill Icons" />
+  </a>
+</p>
 
 </div>
 
@@ -133,15 +154,123 @@ drwxr-xr-x  3 arv1nd  staff    96 Nov 14 2026 ../
 | **Agentic MCP Platform** | `Model Context Protocol (MCP)` `LangGraph` `ChromaDB` `Ollama` `Airflow` | Standardized agent-to-lakehouse bridge allowing LLMs to safely trigger declarative workflows, query vector indexes, and run automated audits. |
 | **[Walmart ELT Analytics](https://github.com/arv1ndofficial/Walmart_Airflow_DBT_Project)** | `Apache Airflow` `dbt` `PostgreSQL` `Docker` `Data Quality` | Production ELT pipelines orchestrating modular dbt transformations with automated schema tests, lineage graphs, and incremental marts. |
 
-<div align="center">
 <br>
+
+<div align="center">
+<h3><code>arv1ndofficial@github ~ $ ./interactive-shell.sh</code></h3>
+<p><i>Click any command below to execute and inspect live architectural telemetry:</i></p>
+</div>
+
+<details>
+<summary><b>▶ <code>cat /lakehouse/architecture-spec.asc</code></b> <i>(Inspect distributed lakehouse blueprint)</i></summary>
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                   ENTERPRISE DISTRIBUTED LAKEHOUSE ARCHITECTURE                        │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+
+ [ Ingestion Streams ]
+   ├── Kafka / Spark Streaming  ──► [ Real-Time Payment Events & Location Coordinates ]
+   └── Databricks Auto Loader    ──► [ CloudFiles Batch / Streaming Ingestion Engine ]
+                                                │
+                                                ▼
+ ┌──────────────────────────────────────────────────────────────────────────────────────┐
+ │ BRONZE LAYER (Raw Ingestion Store / Append-Only Immutable Parquet Logs)             │
+ └──────────────────────────────────────────────────────────────────────────────────────┘
+                                                │
+       Spark Declarative Pipelines (DLT) / SCD Type 1 & 2 CDC Flow
+       + Schema Drift Evolution & @dp.expect Data Quality Expectations
+                                                │
+                                                ▼
+ ┌──────────────────────────────────────────────────────────────────────────────────────┐
+ │ SILVER LAYER (Enriched Lakehouse Tables on Apache Iceberg & Delta Lake)              │
+ └──────────────────────────────────────────────────────────────────────────────────────┘
+        ├── Project Nessie (Git-like Data Branching, Atomic Commits & Rollbacks)
+        └── Hot/Cold Historical Partition Pruning & Snapshot Expiration Policies
+                                                │
+                                                ▼
+ ┌──────────────────────────────────────────────────────────────────────────────────────┐
+ │ GOLD LAYER (Curated Analytics Marts, Dimensional Models & Vector Store)              │
+ └──────────────────────────────────────────────────────────────────────────────────────┘
+        ▲                                                       ▲
+        │ Distributed Federated OLAP                            │ Governed Tool Invocations
+        │                                                       │
+ [ Trino on EKS Analytical Cluster ]            [ Model Context Protocol (MCP) Server ]
+                                                                ▲
+                                                                │ Autonomous Actions
+                                                 [ LLM Agent Ecosystem (LangGraph / RAG) ]
+```
+</details>
+
+<details>
+<summary><b>▶ <code>kubectl get pods -n data-platform</code></b> <i>(View live Kubernetes cluster topology)</i></summary>
+
+```bash
+NAME                                        READY   STATUS    RESTARTS   AGE     NODE-GROUP
+spark-operator-controller-74b89-9x2q        1/1     Running   0          42d     eks-system
+iceberg-nessie-catalog-5d9c8-4kq1           1/1     Running   0          42d     eks-infra
+trino-coordinator-6c8bf-m92p                1/1     Running   0          42d     eks-compute-m5
+trino-worker-group-autoscaling-8x           8/8     Running   0          42d     eks-compute-spot
+airflow-webserver-7b4c9-2v7x                1/1     Running   0          42d     eks-system
+airflow-celery-worker-cluster               4/4     Running   0          42d     eks-compute-m5
+mcp-agent-gateway-8f2a1-k8sp                2/2     Running   0          18d     eks-agents
+chromadb-vector-store-0                     1/1     Running   0          18d     eks-agents
+kafka-broker-cluster                        3/3     Running   0          60d     eks-streaming
+```
+</details>
+
+<details>
+<summary><b>▶ <code>python -m agentic_mcp.client --call-tool query_lakehouse</code></b> <i>(Simulate Agentic MCP Lakehouse Tool)</i></summary>
+
+```json
+{
+  "client": "AutonomousDataAgent_v2",
+  "protocol": "Model Context Protocol (MCP)",
+  "endpoint": "mcp://lakehouse-gateway.internal:8000/v1/call",
+  "request": {
+    "tool": "governed_lakehouse_query",
+    "arguments": {
+      "catalog": "nessie",
+      "namespace": "fintech_gold",
+      "table": "merchant_settlement_scd2",
+      "query": "SELECT merchant_id, sum(settled_amt) FROM merchant_settlement_scd2 WHERE is_current = TRUE GROUP BY 1",
+      "dry_run": false
+    }
+  },
+  "response": {
+    "execution_engine": "Trino-on-EKS",
+    "scanned_partitions": 12,
+    "records_analyzed": 1420500,
+    "latency_ms": 320,
+    "status": "SUCCESS"
+  }
+}
+```
+</details>
+
+<br>
+
+<div align="center">
 
 <h3><code>arv1ndofficial@github ~ $ ./github-metrics.sh</code></h3>
 
+<!-- Open-Source Streak Stats API -->
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=arv1ndofficial&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=3fb950&icon_color=22d3ee&text_color=c9d1d9" alt="Arvind's GitHub Stats" />
+  <a href="https://github.com/arv1ndofficial">
+    <img src="https://streak-stats.demolab.com/?user=arv1ndofficial&theme=tokyonight&background=0D1117&border_radius=8" alt="GitHub Streak Stats" />
+  </a>
+</p>
+
+<!-- Open-Source Profile Summary Cards API -->
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=arv1ndofficial&theme=tokyonight" alt="GitHub Profile Details" />
   &nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arv1ndofficial&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=3fb950&text_color=c9d1d9" alt="Top Languages" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=arv1ndofficial&theme=tokyonight" alt="Languages Breakdown" />
+</p>
+
+<!-- Open-Source Developer Quote API -->
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev Quote" />
 </p>
 
 <br>
